@@ -10,6 +10,7 @@ def index
 
 
 def edit
+
 end
 
 def destroy
@@ -33,6 +34,7 @@ def destroy
   
   def show
     @user = User.find(params[:id])
+    @microposts = @user.microposts.paginate(page: params[:page])
   end
 
   def new
