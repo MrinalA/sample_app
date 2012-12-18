@@ -18,6 +18,10 @@ require 'spec_helper'
 
 describe User do
 
+  it {should respond_to(:feed)}
+  it {should respond_to(:relationships)}
+  it {should respond_to(:followed_users)}
+
   before do
    @user = User.new(name: "Example User", email: "user@example.com",
                     password: "foobar", password_confirmation: "foobar") 
